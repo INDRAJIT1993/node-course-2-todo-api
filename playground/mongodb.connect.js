@@ -14,7 +14,7 @@ console.log(obj);
 // var {name}=user;
 // console.log(name)
 
-MongoClient.connect("mongodb://indrajit1993:123456@ds133746.mlab.com:33746/testing1"||'mongodb://localhost:27017/TodoApp',(err,db) =>{
+MongoClient.connect('mongodb://localhost:27017/TodoApp',(err,db) =>{
     if (err){
         return console.log('unable to connect');
     }
