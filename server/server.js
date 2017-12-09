@@ -3,11 +3,11 @@ var bodyParser = require('body-parser');
 var {ObjectID} = require('mongodb');
 
 var {mongoose} = require('./db/mongoose');
-var {Todo} = require('./models/todo');
-var {User} = require('./models/user');
+var {Todo} = require('./modals/todo');
+var {User} = require('./modals/user');
 
 var app = express();
-const port = 33796 || 3000;
+const port = process.env.port || 3000;
 
 app.use(bodyParser.json());
 
