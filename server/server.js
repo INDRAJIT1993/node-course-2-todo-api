@@ -54,3 +54,12 @@ app.listen(port, () => {
 });
 
 module.exports = {app};
+
+
+var mongoose = require('mongoose');
+mongoose.connect("mongodb://indrajit1993:123456@ds133746.mlab.com:33746/testing1",{useMongoClient:true});
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+console.log('connection established');
+});
